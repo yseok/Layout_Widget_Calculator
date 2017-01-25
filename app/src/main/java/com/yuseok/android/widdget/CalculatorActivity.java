@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WiddgetActivity extends AppCompatActivity implements View.OnClickListener {
+public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
 
     // 1. 위젯 변수 선언
     TextView Result, pre;
@@ -118,7 +118,7 @@ public class WiddgetActivity extends AppCompatActivity implements View.OnClickLi
                 eval(pre.getText().toString());
                 break;
             case R.id.btnC:
-                Log.d("WiddgetActivity","Cancel clicked="+view);
+                Log.d("CalculatorActivity","Cancel clicked="+view);
                 setPreview("");
                 setResult("");
                 break;
@@ -161,7 +161,7 @@ public class WiddgetActivity extends AppCompatActivity implements View.OnClickLi
                 two = Double.parseDouble(list.get(index+1));
                 // 4.3.3 두 숫자를 곱한다.
                 sum = one * two;
-                Log.d("WiddgetActivity","check [***] index="+index+", sum="+sum);
+                Log.d("CalculatorActivity","check [***] index="+index+", sum="+sum);
                 // 곱하기에 걸렸다는 표식을 해준다
                 check = true;
                 // 4.3 값이 나누기일 경우
@@ -172,7 +172,7 @@ public class WiddgetActivity extends AppCompatActivity implements View.OnClickLi
                 two = Double.parseDouble(list.get(index+1));
                 // 4.3.3 값을 더한다.
                 sum = one / two;
-                Log.d("WiddgetActivity","check [///] index="+index+", sum="+sum);
+                Log.d("CalculatorActivity","check [///] index="+index+", sum="+sum);
                 check = true;
                 // 4.4 연산자에 걸리지 않으면 체크 플래그를 false 전환해서 반복문을 진행하게 한다.
             }else{
@@ -193,7 +193,7 @@ public class WiddgetActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
 
-        Log.d("WiddgetActivity","check [index]="+index);
+        Log.d("CalculatorActivity","check [index]="+index);
 
         index = 0;
 
@@ -208,13 +208,13 @@ public class WiddgetActivity extends AppCompatActivity implements View.OnClickLi
                 one = Double.parseDouble(list.get(index-1));
                 two = Double.parseDouble(list.get(index+1));
                 sum = one + two;
-                Log.d("WiddgetActivity","check [+++] index="+index+", sum="+sum);
+                Log.d("CalculatorActivity","check [+++] index="+index+", sum="+sum);
                 check = true;
             }else if(item.equals("-")){
                 one = Double.parseDouble(list.get(index-1));
                 two = Double.parseDouble(list.get(index+1));
                 sum = one - two;
-                Log.d("WiddgetActivity","check [---] index="+index+", sum="+sum);
+                Log.d("CalculatorActivity","check [---] index="+index+", sum="+sum);
                 check = true;
             }else{
                 check = false;
