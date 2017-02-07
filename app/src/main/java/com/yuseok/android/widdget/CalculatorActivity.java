@@ -15,6 +15,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     TextView Result, pre;
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnPlus, btnMinus, btnMulti, btnDivide, btnC, btnR;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +125,8 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
                 break;
         }
     }
+
+
 
     // 문자열을 수식으로 계산하기
     private void eval(String value){

@@ -9,7 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     // 1.위젯을 선언한다.
-    Button btn, cal;
+    Button btn, cal, widget, unit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 2.정의된 위젯변수에 xml의 위젯 id를 가져와서 담아준다.
         btn = (Button)findViewById(R.id.btnGrid);
         cal = (Button)findViewById(R.id.cal);
+        widget = (Button)findViewById(R.id.widget);
+        unit = (Button)findViewById(R.id.unit);
+
 
         // 3. 변수(위젯)을 리스너에 달아준다.
         btn.setOnClickListener(this);
         cal.setOnClickListener(this);
+        widget.setOnClickListener(this);
+        unit.setOnClickListener(this);
+
     }
 
     @Override
@@ -41,6 +47,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, CalculatorActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.widget:
+                intent = new Intent(this, Widget.class);
+                startActivity(intent);
+                break;
+
+            case R.id.unit:
+                intent = new Intent(this, unitActivity.class);
+                startActivity(intent);
+                break;
         }
     }
+
 }

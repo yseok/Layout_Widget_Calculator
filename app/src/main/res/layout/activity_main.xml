@@ -12,18 +12,36 @@
 
     <Button
         android:text="Grid"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/btnGrid" />
+        android:id="@+id/btnGrid"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/widget"
+        android:layout_below="@+id/cal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Calculator"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
         android:id="@+id/cal"
-        android:layout_above="@+id/btnGrid"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/btnGrid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unit"
+        android:layout_below="@+id/widget"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

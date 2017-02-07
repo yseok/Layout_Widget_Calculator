@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Grid" />
-        <activity android:name=".CalculatorActivity"></activity>
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".Widget" />
+        <activity android:name=".unitActivity" />
     </application>
 
 </manifest>
